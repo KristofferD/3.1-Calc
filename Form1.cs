@@ -1,10 +1,73 @@
-namespace _3._1_Calc
+using System;
+using System.Windows.Forms;
+
+namespace Calculator
 {
-    public partial class Form1 : Form
+    public partial class CalculatorForm : Form
     {
-        public Form1()
+        public CalculatorForm()
         {
             InitializeComponent();
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double num1 = double.Parse(inputBox1.Text);
+                double num2 = double.Parse(inputBox2.Text);
+                double result = num1 + num2;
+                displayBox.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void subtractButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double num1 = double.Parse(inputBox1.Text);
+                double num2 = double.Parse(inputBox2.Text);
+                double result = num1 - num2;
+                displayBox.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void multiplyButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double num1 = double.Parse(inputBox1.Text);
+                double num2 = double.Parse(inputBox2.Text);
+                double result = num1 * num2;
+                displayBox.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void divideButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double num1 = double.Parse(inputBox1.Text);
+                double num2 = double.Parse(inputBox2.Text);
+                double result = num1 / num2;
+                displayBox.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
     }
 }

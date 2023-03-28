@@ -1,4 +1,4 @@
-namespace _3._1_Calc
+namespace Calculator
 {
     internal static class Program
     {
