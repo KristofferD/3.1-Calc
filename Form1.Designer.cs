@@ -126,6 +126,9 @@
             Text = "Calculator";
             ResumeLayout(false);
             PerformLayout();
+
+
+
         }
 
         #endregion

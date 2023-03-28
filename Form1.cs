@@ -9,8 +9,110 @@ namespace Calculator
         {
             InitializeComponent();
         }
+        private void CalculatorForm_Load(object? sender, EventArgs e)
+        {
+            // Set up the form and controls
+            this.Text = "Calculator";
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
 
-        private void addButton_Click(object sender, EventArgs e)
+            // Create buttons for each operation
+            Button addButton = new Button();
+            addButton.Text = "+";
+            addButton.Location = new Point(10, 10);
+            addButton.Size = new Size(50, 50);
+            addButton.Click += new EventHandler(addButton_Click);
+            this.Controls.Add(addButton);
+
+            Button subtractButton = new Button();
+            subtractButton.Text = "-";
+            subtractButton.Location = new Point(70, 10);
+            subtractButton.Size = new Size(50, 50);
+            subtractButton.Click += new EventHandler(subtractButton_Click);
+            this.Controls.Add(subtractButton);
+
+            Button multiplyButton = new Button();
+            multiplyButton.Text = "x";
+            multiplyButton.Location = new Point(130, 10);
+            multiplyButton.Size = new Size(50, 50);
+            multiplyButton.Click += new EventHandler(multiplyButton_Click);
+            this.Controls.Add(multiplyButton);
+
+            Button divideButton = new Button();
+            divideButton.Text = "/";
+            divideButton.Location = new Point(190, 10);
+            divideButton.Size = new Size(50, 50);
+            divideButton.Click += new EventHandler(divideButton_Click);
+            this.Controls.Add(divideButton);
+
+            Button sineButton = new Button();
+            sineButton.Text = "sin";
+            sineButton.Location = new Point(10, 70);
+            sineButton.Size = new Size(50, 50);
+            sineButton.Click += new EventHandler(sineButton_Click);
+            this.Controls.Add(sineButton);
+
+            Button cosineButton = new Button();
+            cosineButton.Text = "cos";
+            cosineButton.Location = new Point(70, 70);
+            cosineButton.Size = new Size(50, 50);
+            cosineButton.Click += new EventHandler(cosineButton_Click);
+            this.Controls.Add(cosineButton);
+
+            Button tangentButton = new Button();
+            tangentButton.Text = "tan";
+            tangentButton.Location = new Point(130, 70);
+            tangentButton.Size = new Size(50, 50);
+            tangentButton.Click += new EventHandler(tangentButton_Click);
+            this.Controls.Add(tangentButton);
+
+            Button powerButton = new Button();
+            powerButton.Text = "^";
+            powerButton.Location = new Point(190, 70);
+            powerButton.Size = new Size(50, 50);
+            powerButton.Click += new EventHandler(powerButton_Click);
+            this.Controls.Add(powerButton);
+
+            Button floorButton = new Button();
+            floorButton.Text = "floor";
+            floorButton.Location = new Point(10, 130);
+            floorButton.Size = new Size(50, 50);
+            floorButton.Click += new EventHandler(floorButton_Click);
+            this.Controls.Add(floorButton);
+
+            Button ceilingButton = new Button();
+            ceilingButton.Text = "ceiling";
+            ceilingButton.Location = new Point(70, 130);
+            ceilingButton.Size = new Size(50, 50);
+            ceilingButton.Click += new EventHandler(ceilingButton_Click);
+            this.Controls.Add(ceilingButton);
+
+            // Create a display box to show the result
+            TextBox displayBox = new TextBox();
+            displayBox.Location = new Point(10, 70);
+            displayBox.Size = new Size(200, 30);
+            displayBox.ReadOnly = true;
+            this.Controls.Add(displayBox);
+
+            // Create a panel to group the function buttons
+            Panel functionPanel = new Panel();
+            functionPanel.Location = new Point(10, 110);
+            functionPanel.Size = new Size(200, 150);
+            functionPanel.BorderStyle = BorderStyle.FixedSingle;
+            this.Controls.Add(functionPanel);
+
+            // Create buttons for each function
+            Button sqrtButton = new Button();
+            sqrtButton.Text = "sqrt";
+            sqrtButton.Location = new Point(10, 10);
+            sqrtButton.Size = new Size(50, 50);
+            sqrtButton.Click += new EventHandler(sqrtButton_Click);
+            functionPanel.Controls.Add(sqrtButton);
+
+
+        }
+
+        private void addButton_Click(object? sender, EventArgs e)
         {
             try
             {
@@ -25,7 +127,7 @@ namespace Calculator
             }
         }
 
-        private void subtractButton_Click(object sender, EventArgs e)
+        private void subtractButton_Click(object? sender, EventArgs e)
         {
             try
             {
@@ -40,7 +142,7 @@ namespace Calculator
             }
         }
 
-        private void multiplyButton_Click(object sender, EventArgs e)
+        private void multiplyButton_Click(object? sender, EventArgs e)
         {
             try
             {
@@ -55,7 +157,7 @@ namespace Calculator
             }
         }
 
-        private void divideButton_Click(object sender, EventArgs e)
+        private void divideButton_Click(object? sender, EventArgs e)
         {
             try
             {
@@ -70,7 +172,7 @@ namespace Calculator
             }
         }
 
-        private void expButton_Click(object sender, EventArgs e)
+        private void expButton_Click(object? sender, EventArgs e)
         {
             try
             {
@@ -85,7 +187,7 @@ namespace Calculator
             }
         }
 
-        private void sqrtButton_Click(object sender, EventArgs e)
+        private void sqrtButton_Click(object? sender, EventArgs e)
         {
             try
             {
@@ -99,7 +201,7 @@ namespace Calculator
             }
         }
 
-        private void absButton_Click(object sender, EventArgs e)
+        private void absButton_Click(object? sender, EventArgs e)
         {
             try
             {
@@ -113,7 +215,7 @@ namespace Calculator
             }
         }
 
-        private void sinButton_Click(object sender, EventArgs e)
+        private void sineButton_Click(object? sender, EventArgs e)
         {
             try
             {
@@ -127,7 +229,7 @@ namespace Calculator
             }
         }
 
-        private void cosButton_Click(object sender, EventArgs e)
+        private void cosineButton_Click(object? sender, EventArgs e)
         {
             try
             {
@@ -141,7 +243,7 @@ namespace Calculator
             }
         }
 
-        private void tanButton_Click(object sender, EventArgs e)
+        private void tangentButton_Click(object? sender, EventArgs e)
         {
             try
             {
@@ -155,7 +257,7 @@ namespace Calculator
             }
         }
 
-        private void logButton_Click(object sender, EventArgs e)
+        private void powerButton_Click(object? sender, EventArgs e)
         {
             try
             {
@@ -169,7 +271,7 @@ namespace Calculator
             }
         }
 
-        private void lnButton_Click(object sender, EventArgs e)
+        private void lnButton_Click(object? sender, EventArgs e)
         {
             try
             {
@@ -183,7 +285,7 @@ namespace Calculator
             }
         }
 
-        private void floorButton_Click(object sender, EventArgs e)
+        private void floorButton_Click(object? sender, EventArgs e)
         {
             try
             {
@@ -197,7 +299,7 @@ namespace Calculator
             }
         }
 
-        private void ceilButton_Click(object sender, EventArgs e)
+        private void ceilingButton_Click(object? sender, EventArgs e)
         {
             try
             {
@@ -210,6 +312,8 @@ namespace Calculator
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+
 
 
 
