@@ -5,6 +5,18 @@ namespace Calculator
 {
     public partial class CalculatorForm : Form
     {
+        private Button? addButton = null;
+        private Button? subtractButton = null;
+        private Button? multiplyButton = null;
+        private Button? divideButton = null;
+        private Button? sineButton = null;
+        private Button? cosineButton = null;
+        private Button? tangentButton = null;
+        private Button? powerButton = null;
+        private Button? floorButton = null;
+        private Button? ceilingButton = null;
+        private Button? sqrtButton = null;
+
         public CalculatorForm()
         {
             InitializeComponent();

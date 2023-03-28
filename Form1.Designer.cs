@@ -31,10 +31,10 @@
             inputBox1 = new TextBox();
             inputBox2 = new TextBox();
             displayBox = new TextBox();
-            addButton = new Button();
+           /* addButton = new Button();
             subtractButton = new Button();
             multiplyButton = new Button();
-            divideButton = new Button();
+            divideButton = new Button();*/
             SuspendLayout();
             // 
             // inputBox1
