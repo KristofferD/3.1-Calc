@@ -30,70 +30,70 @@ namespace Calculator
             this.MaximizeBox = false;
 
             // Create buttons for each operation
-            Button addButton = new Button();
+            System.Windows.Forms.Button addButton = new System.Windows.Forms.Button();
             addButton.Text = "+";
             addButton.Location = new Point(10, 10);
             addButton.Size = new Size(50, 50);
             addButton.Click += new EventHandler(addButton_Click);
             this.Controls.Add(addButton);
 
-            Button subtractButton = new Button();
+            System.Windows.Forms.Button subtractButton = new System.Windows.Forms.Button();
             subtractButton.Text = "-";
             subtractButton.Location = new Point(70, 10);
             subtractButton.Size = new Size(50, 50);
             subtractButton.Click += new EventHandler(subtractButton_Click);
             this.Controls.Add(subtractButton);
 
-            Button multiplyButton = new Button();
+            System.Windows.Forms.Button multiplyButton = new System.Windows.Forms.Button();
             multiplyButton.Text = "x";
             multiplyButton.Location = new Point(130, 10);
             multiplyButton.Size = new Size(50, 50);
             multiplyButton.Click += new EventHandler(multiplyButton_Click);
             this.Controls.Add(multiplyButton);
 
-            Button divideButton = new Button();
+            System.Windows.Forms.Button divideButton = new System.Windows.Forms.Button();
             divideButton.Text = "/";
             divideButton.Location = new Point(190, 10);
             divideButton.Size = new Size(50, 50);
             divideButton.Click += new EventHandler(divideButton_Click);
             this.Controls.Add(divideButton);
 
-            Button sineButton = new Button();
+            System.Windows.Forms.Button sineButton = new System.Windows.Forms.Button();
             sineButton.Text = "sin";
             sineButton.Location = new Point(10, 70);
             sineButton.Size = new Size(50, 50);
             sineButton.Click += new EventHandler(sineButton_Click);
             this.Controls.Add(sineButton);
 
-            Button cosineButton = new Button();
+            System.Windows.Forms.Button cosineButton = new System.Windows.Forms.Button();
             cosineButton.Text = "cos";
             cosineButton.Location = new Point(70, 70);
             cosineButton.Size = new Size(50, 50);
             cosineButton.Click += new EventHandler(cosineButton_Click);
             this.Controls.Add(cosineButton);
 
-            Button tangentButton = new Button();
+            System.Windows.Forms.Button tangentButton = new System.Windows.Forms.Button();
             tangentButton.Text = "tan";
             tangentButton.Location = new Point(130, 70);
             tangentButton.Size = new Size(50, 50);
             tangentButton.Click += new EventHandler(tangentButton_Click);
             this.Controls.Add(tangentButton);
 
-            Button powerButton = new Button();
+            System.Windows.Forms.Button powerButton = new System.Windows.Forms.Button();
             powerButton.Text = "^";
             powerButton.Location = new Point(190, 70);
             powerButton.Size = new Size(50, 50);
             powerButton.Click += new EventHandler(powerButton_Click);
             this.Controls.Add(powerButton);
 
-            Button floorButton = new Button();
+            System.Windows.Forms.Button floorButton = new System.Windows.Forms.Button();
             floorButton.Text = "floor";
             floorButton.Location = new Point(10, 130);
             floorButton.Size = new Size(50, 50);
             floorButton.Click += new EventHandler(floorButton_Click);
             this.Controls.Add(floorButton);
 
-            Button ceilingButton = new Button();
+            System.Windows.Forms.Button ceilingButton = new System.Windows.Forms.Button();
             ceilingButton.Text = "ceiling";
             ceilingButton.Location = new Point(70, 130);
             ceilingButton.Size = new Size(50, 50);
@@ -115,7 +115,7 @@ namespace Calculator
             this.Controls.Add(functionPanel);
 
             // Create buttons for each function
-            Button sqrtButton = new Button();
+            System.Windows.Forms.Button sqrtButton = new System.Windows.Forms.Button();
             sqrtButton.Text = "sqrt";
             sqrtButton.Location = new Point(10, 10);
             sqrtButton.Size = new Size(50, 50);

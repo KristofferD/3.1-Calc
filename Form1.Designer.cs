@@ -108,44 +108,44 @@
             divideButton.Click += divideButton_Click;*/
 
             // Sine Button
-            this.sinButton = new System.Windows.Forms.Button();
-            this.sinButton.Location = new System.Drawing.Point(150, 120);
-            this.sinButton.Name = "sinButton";
-            this.sinButton.Size = new System.Drawing.Size(60, 40);
-            this.sinButton.Text = "sin";
-            this.sinButton.UseVisualStyleBackColor = true;
-            this.sinButton.Click += new System.EventHandler(this.sinButton_Click);
-            this.Controls.Add(this.sinButton);
+            this.sineButton = new System.Windows.Forms.Button();
+            this.sineButton.Location = new System.Drawing.Point(150, 120);
+            this.sineButton.Name = "sinButton";
+            this.sineButton.Size = new System.Drawing.Size(60, 40);
+            this.sineButton.Text = "sin";
+            this.sineButton.UseVisualStyleBackColor = true;
+            this.sineButton.Click += new System.EventHandler(this.sineButton_Click);
+            this.Controls.Add(this.sineButton);
 
             // Cosine Button
-            this.cosButton = new System.Windows.Forms.Button();
-            this.cosButton.Location = new System.Drawing.Point(220, 120);
-            this.cosButton.Name = "cosButton";
-            this.cosButton.Size = new System.Drawing.Size(60, 40);
-            this.cosButton.Text = "cos";
-            this.cosButton.UseVisualStyleBackColor = true;
-            this.cosButton.Click += new System.EventHandler(this.cosButton_Click);
-            this.Controls.Add(this.cosButton);
+            this.cosineButton = new System.Windows.Forms.Button();
+            this.cosineButton.Location = new System.Drawing.Point(220, 120);
+            this.cosineButton.Name = "cosButton";
+            this.cosineButton.Size = new System.Drawing.Size(60, 40);
+            this.cosineButton.Text = "cos";
+            this.cosineButton.UseVisualStyleBackColor = true;
+            this.cosineButton.Click += new System.EventHandler(this.cosineButton_Click);
+            this.Controls.Add(this.cosineButton);
 
             // Tangent Button
-            this.tanButton = new System.Windows.Forms.Button();
-            this.tanButton.Location = new System.Drawing.Point(290, 120);
-            this.tanButton.Name = "tanButton";
-            this.tanButton.Size = new System.Drawing.Size(60, 40);
-            this.tanButton.Text = "tan";
-            this.tanButton.UseVisualStyleBackColor = true;
-            this.tanButton.Click += new System.EventHandler(this.tanButton_Click);
-            this.Controls.Add(this.tanButton);
+            this.tangentButton = new System.Windows.Forms.Button();
+            this.tangentButton.Location = new System.Drawing.Point(290, 120);
+            this.tangentButton.Name = "tanButton";
+            this.tangentButton.Size = new System.Drawing.Size(60, 40);
+            this.tangentButton.Text = "tan";
+            this.tangentButton.UseVisualStyleBackColor = true;
+            this.tangentButton.Click += new System.EventHandler(this.tangentButton_Click);
+            this.Controls.Add(this.tangentButton);
 
             // Exponent Button
-            this.expButton = new System.Windows.Forms.Button();
-            this.expButton.Location = new System.Drawing.Point(150, 170);
-            this.expButton.Name = "expButton";
-            this.expButton.Size = new System.Drawing.Size(60, 40);
-            this.expButton.Text = "Exp";
-            this.expButton.UseVisualStyleBackColor = true;
-            this.expButton.Click += new System.EventHandler(this.expButton_Click);
-            this.Controls.Add(this.expButton);
+            this.powerButton = new System.Windows.Forms.Button();
+            this.powerButton.Location = new System.Drawing.Point(150, 170);
+            this.powerButton.Name = "expButton";
+            this.powerButton.Size = new System.Drawing.Size(60, 40);
+            this.powerButton.Text = "Exp";
+            this.powerButton.UseVisualStyleBackColor = true;
+            this.powerButton.Click += new System.EventHandler(this.expButton_Click);
+            this.Controls.Add(this.powerButton);
 
             // Floor Button
             this.floorButton = new System.Windows.Forms.Button();
