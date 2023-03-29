@@ -9,6 +9,86 @@ namespace Calculator
        public CalculatorForm()
         {
             InitializeComponent();
+            // Add inputBox1
+            inputBox1 = new System.Windows.Forms.TextBox();
+            inputBox1.Location = new Point(10, 10);
+            inputBox1.Size = new Size(100, 20);
+            this.Controls.Add(inputBox1);
+
+            // Add inputBox2
+            inputBox2 = new System.Windows.Forms.TextBox();
+            inputBox2.Location = new Point(120, 10);
+            inputBox2.Size = new Size(100, 20);
+            this.Controls.Add(inputBox2);
+
+            // Add displayBox
+            displayBox = new System.Windows.Forms.TextBox();
+            displayBox.Location = new Point(10, 40);
+            displayBox.Size = new Size(210, 20);
+            displayBox.ReadOnly = true;
+            this.Controls.Add(displayBox);
+
+            // Add buttons
+            string[] buttonTexts = { "sqrt", "abs", "sin", "cos", "tan", "pow", "ln", "ceil", "floor" };
+            int x = 10;
+            int y = 70;
+
+            for (int i = 0; i < buttonTexts.Length; i++)
+            {
+                System.Windows.Forms.Button button = new System.Windows.Forms.Button();
+                button.Text = buttonTexts[i];
+                button.Location = new Point(x, y);
+                button.Size = new Size(50, 30);
+                button.Click += (sender, e) =>
+                {
+                    var buttonClicked = sender as System.Windows.Forms.Button;
+                    PerformOperation(buttonClicked.Text);
+                };
+
+                this.Controls.Add(button);
+
+                x += 60;
+
+                if ((i + 1) % 3 == 0)
+                {
+                    x = 10;
+                    y += 40;
+                }
+            }
+            private void PerformOperation(string operation)
+            {
+                switch (operation)
+                {
+                    case "sqrt":
+                        sqrtButton_Click(null, EventArgs.Empty);
+                        break;
+                    case "abs":
+                        absButton_Click(null, EventArgs.Empty);
+                        break;
+                    case "sin":
+                        sineButton_Click(null, EventArgs.Empty);
+                        break;
+                    case "cos":
+                        cosineButton_Click(null, EventArgs.Empty);
+                        break;
+                    case "tan":
+                        tangentButton_Click(null, EventArgs.Empty);
+                        break;
+                    case "pow":
+                        powerButton_Click(null, EventArgs.Empty);
+                        break;
+                    case "ln":
+                        lnButton_Click(null, EventArgs.Empty);
+                        break;
+                    case "ceil":
+                        ceilingButton_Click(null, EventArgs.Empty);
+                        break;
+                    case "floor":
+                        floorButton_Click(null, EventArgs.Empty);
+                        break;
+                }
+            }
+
         }
         private void CalculatorForm_Load(object? sender, EventArgs e)
         {
