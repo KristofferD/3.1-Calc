@@ -165,6 +165,9 @@
             this.ceilingButton.Text = "Ceil";
             this.ceilingButton.UseVisualStyleBackColor = true;
             this.ceilingButton.Click += new System.EventHandler(this.ceilingButton_Click);
+
+            //Squarroot Button
+
             // 
             // CalculatorForm
             // 
@@ -178,6 +181,8 @@
             Controls.Add(multiplyButton);
             Controls.Add(subtractButton);
             Controls.Add(addButton);
+            Controls.Add(ceilingButton);
+            Controls.Add(floorButton);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;

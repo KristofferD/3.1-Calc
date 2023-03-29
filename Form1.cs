@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Calculator
 {
@@ -186,16 +187,22 @@ namespace Calculator
 
         private void expButton_Click(object? sender, EventArgs e)
         {
-            try
+            double inputValue;
+            if (double.TryParse(textBox1.Text, out inputValue))
             {
-                double num1 = double.Parse(inputBox1.Text);
-                double num2 = double.Parse(inputBox2.Text);
-                double result = Math.Pow(num1, num2);
-                displayBox.Text = result.ToString();
+                if (inputValue >= 0)
+                {
+                    double result = Math.Sqrt(inputValue);
+                    textBox1.Text = result.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid input. Square root of a negative number is not supported.");
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Invalid input. Please enter a valid number.");
             }
         }
 
@@ -229,57 +236,57 @@ namespace Calculator
 
         private void sineButton_Click(object? sender, EventArgs e)
         {
-            try
+            double inputValue;
+            if (double.TryParse(textBox1.Text, out inputValue))
             {
-                double num = double.Parse(inputBox1.Text);
-                double result = Math.Sin(num);
-                displayBox.Text = result.ToString();
+                double result = Math.Sin(inputValue);
+                textBox1.Text = result.ToString();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Invalid input. Please enter a valid number.");
             }
         }
 
         private void cosineButton_Click(object? sender, EventArgs e)
         {
-            try
+            double inputValue;
+            if (double.TryParse(textBox1.Text, out inputValue))
             {
-                double num = double.Parse(inputBox1.Text);
-                double result = Math.Cos(num);
-                displayBox.Text = result.ToString();
+                double result = Math.Cos(inputValue);
+                textBox1.Text = result.ToString();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Invalid input. Please enter a valid number.");
             }
         }
 
         private void tangentButton_Click(object? sender, EventArgs e)
         {
-            try
+            double inputValue;
+            if (double.TryParse(textBox1.Text, out inputValue))
             {
-                double num = double.Parse(inputBox1.Text);
-                double result = Math.Tan(num);
-                displayBox.Text = result.ToString();
+                double result = Math.Tan(inputValue);
+                textBox1.Text = result.ToString();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Invalid input. Please enter a valid number.");
             }
         }
 
         private void powerButton_Click(object? sender, EventArgs e)
         {
-            try
+            double inputValue;
+            if (double.TryParse(textBox1.Text, out inputValue))
             {
-                double num = double.Parse(inputBox1.Text);
-                double result = Math.Log10(num);
-                displayBox.Text = result.ToString();
+                double result = Math.Exp(inputValue);
+                textBox1.Text = result.ToString();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Invalid input. Please enter a valid number.");
             }
         }
 
@@ -299,29 +306,29 @@ namespace Calculator
 
         private void floorButton_Click(object? sender, EventArgs e)
         {
-            try
+            double inputValue;
+            if (double.TryParse(textBox1.Text, out inputValue))
             {
-                double num1 = double.Parse(inputBox1.Text);
-                double result = Math.Floor(num1);
-                displayBox.Text = result.ToString();
+                double result = Math.Floor(inputValue);
+                textBox1.Text = result.ToString();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Invalid input. Please enter a valid number.");
             }
         }
 
         private void ceilingButton_Click(object? sender, EventArgs e)
         {
-            try
+            double inputValue;
+            if (double.TryParse(textBox1.Text, out inputValue))
             {
-                double num1 = double.Parse(inputBox1.Text);
-                double result = Math.Ceiling(num1);
-                displayBox.Text = result.ToString();
+                double result = Math.Ceiling(inputValue);
+                textBox1.Text = result.ToString();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Invalid input. Please enter a valid number.");
             }
         }
 
