@@ -29,7 +29,7 @@ namespace Calculator
             this.Controls.Add(displayBox);
 
             // Add buttons
-            string[] buttonTexts = { "sqrt", "abs", "sin", "cos", "tan", "pow", "ln", "ceil", "floor" };
+            string[] buttonTexts = { "+", "-", "x", "/", "sqrt", "abs", "sin", "cos", "tan", "pow", "ln", "ceil", "floor" };
             int x = 10;
             int y = 70;
 
@@ -49,46 +49,59 @@ namespace Calculator
 
                 x += 60;
 
-                if ((i + 1) % 3 == 0)
+                if ((i + 1) % 4 == 0)
                 {
                     x = 10;
                     y += 40;
                 }
             }
-            private void PerformOperation(string operation)
-            {
-                switch (operation)
-                {
-                    case "sqrt":
-                        sqrtButton_Click(null, EventArgs.Empty);
-                        break;
-                    case "abs":
-                        absButton_Click(null, EventArgs.Empty);
-                        break;
-                    case "sin":
-                        sineButton_Click(null, EventArgs.Empty);
-                        break;
-                    case "cos":
-                        cosineButton_Click(null, EventArgs.Empty);
-                        break;
-                    case "tan":
-                        tangentButton_Click(null, EventArgs.Empty);
-                        break;
-                    case "pow":
-                        powerButton_Click(null, EventArgs.Empty);
-                        break;
-                    case "ln":
-                        lnButton_Click(null, EventArgs.Empty);
-                        break;
-                    case "ceil":
-                        ceilingButton_Click(null, EventArgs.Empty);
-                        break;
-                    case "floor":
-                        floorButton_Click(null, EventArgs.Empty);
-                        break;
-                }
-            }
 
+        }
+
+        void PerformOperation(string operation)
+        {
+            switch (operation)
+            {
+                case "+":
+                    addButton_Click(null, EventArgs.Empty);
+                    break;
+                case "-":
+                    subtractButton_Click(null, EventArgs.Empty);
+                    break;
+                case "x":
+                    multiplyButton_Click(null, EventArgs.Empty);
+                    break;
+                case "/":
+                    divideButton_Click(null, EventArgs.Empty);
+                    break;
+                case "sqrt":
+                    sqrtButton_Click(null, EventArgs.Empty);
+                    break;
+                case "abs":
+                    absButton_Click(null, EventArgs.Empty);
+                    break;
+                case "sin":
+                    sineButton_Click(null, EventArgs.Empty);
+                    break;
+                case "cos":
+                    cosineButton_Click(null, EventArgs.Empty);
+                    break;
+                case "tan":
+                    tangentButton_Click(null, EventArgs.Empty);
+                    break;
+                case "pow":
+                    powerButton_Click(null, EventArgs.Empty);
+                    break;
+                case "ln":
+                    lnButton_Click(null, EventArgs.Empty);
+                    break;
+                case "ceil":
+                    ceilingButton_Click(null, EventArgs.Empty);
+                    break;
+                case "floor":
+                    floorButton_Click(null, EventArgs.Empty);
+                    break;
+            }
         }
         private void CalculatorForm_Load(object? sender, EventArgs e)
         {
@@ -326,16 +339,9 @@ namespace Calculator
 
         private void ceilingButton_Click(object? sender, EventArgs e)
         {
-            double inputValue;
-            if (double.TryParse(textBox1.Text, out inputValue))
-            {
-                double result = Math.Ceiling(inputValue);
-                textBox1.Text = result.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Invalid input. Please enter a valid number.");
-            }
+            double input1 = Convert.ToDouble(inputBox1.Text);
+            double result = Math.Ceiling(input1);
+            displayBox.Text = result.ToString();
         }
 
 
