@@ -6,19 +6,7 @@ namespace Calculator
 {
     public partial class CalculatorForm : Form
     {
-       /* private Button? addButton = null;
-        private Button? subtractButton = null;
-        private Button? multiplyButton = null;
-        private Button? divideButton = null;
-        private Button? sineButton = null;
-        private Button? cosineButton = null;
-        private Button? tangentButton = null;
-        private Button? powerButton = null;
-        private Button? floorButton = null;
-        private Button? ceilingButton = null;
-        private Button? sqrtButton = null;*/
-
-        public CalculatorForm()
+       public CalculatorForm()
         {
             InitializeComponent();
         }
@@ -187,136 +175,74 @@ namespace Calculator
 
         private void expButton_Click(object? sender, EventArgs e)
         {
-            double inputValue;
-            if (double.TryParse(textBox1.Text, out inputValue))
-            {
-                if (inputValue >= 0)
-                {
-                    double result = Math.Sqrt(inputValue);
-                    textBox1.Text = result.ToString();
-                }
-                else
-                {
-                    MessageBox.Show("Invalid input. Square root of a negative number is not supported.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Invalid input. Please enter a valid number.");
-            }
+            // Get the user inputs
+            double input1 = Convert.ToDouble(inputBox1.Text);
+            double input2 = Convert.ToDouble(inputBox2.Text);
+
+            // Perform exponentiation
+            double result = Math.Pow(input1, input2);
+
+            // Display the result in 'displayBox'
+            displayBox.Text = result.ToString();
         }
 
-        private void sqrtButton_Click(object? sender, EventArgs e)
+        private void sqrtButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                double num = double.Parse(inputBox1.Text);
-                double result = Math.Sqrt(num);
-                displayBox.Text = result.ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
+            double input1 = Convert.ToDouble(inputBox1.Text);
+            double result = Math.Sqrt(input1);
+            displayBox.Text = result.ToString();
         }
 
-        private void absButton_Click(object? sender, EventArgs e)
+        private void absButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                double num = double.Parse(inputBox1.Text);
-                double result = Math.Abs(num);
-                displayBox.Text = result.ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
+            double input1 = Convert.ToDouble(inputBox1.Text);
+            double result = Math.Abs(input1);
+            displayBox.Text = result.ToString();
         }
 
-        private void sineButton_Click(object? sender, EventArgs e)
+        private void sineButton_Click(object sender, EventArgs e)
         {
-            double inputValue;
-            if (double.TryParse(textBox1.Text, out inputValue))
-            {
-                double result = Math.Sin(inputValue);
-                textBox1.Text = result.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Invalid input. Please enter a valid number.");
-            }
+            double input1 = Convert.ToDouble(inputBox1.Text);
+            double result = Math.Sin(input1);
+            displayBox.Text = result.ToString();
         }
 
-        private void cosineButton_Click(object? sender, EventArgs e)
+        private void cosineButton_Click(object sender, EventArgs e)
         {
-            double inputValue;
-            if (double.TryParse(textBox1.Text, out inputValue))
-            {
-                double result = Math.Cos(inputValue);
-                textBox1.Text = result.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Invalid input. Please enter a valid number.");
-            }
+            double input1 = Convert.ToDouble(inputBox1.Text);
+            double result = Math.Cos(input1);
+            displayBox.Text = result.ToString();
         }
 
-        private void tangentButton_Click(object? sender, EventArgs e)
+        private void tangentButton_Click(object sender, EventArgs e)
         {
-            double inputValue;
-            if (double.TryParse(textBox1.Text, out inputValue))
-            {
-                double result = Math.Tan(inputValue);
-                textBox1.Text = result.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Invalid input. Please enter a valid number.");
-            }
+            double input1 = Convert.ToDouble(inputBox1.Text);
+            double result = Math.Tan(input1);
+            displayBox.Text = result.ToString();
         }
 
-        private void powerButton_Click(object? sender, EventArgs e)
+        private void powerButton_Click(object sender, EventArgs e)
         {
-            double inputValue;
-            if (double.TryParse(textBox1.Text, out inputValue))
-            {
-                double result = Math.Exp(inputValue);
-                textBox1.Text = result.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Invalid input. Please enter a valid number.");
-            }
+            double input1 = Convert.ToDouble(inputBox1.Text);
+            double input2 = Convert.ToDouble(inputBox2.Text);
+            double result = Math.Pow(input1, input2);
+            displayBox.Text = result.ToString();
         }
 
-        private void lnButton_Click(object? sender, EventArgs e)
+        private void lnButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                double num = double.Parse(inputBox1.Text);
-                double result = Math.Log(num);
-                displayBox.Text = result.ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
+            double input1 = Convert.ToDouble(inputBox1.Text);
+            double result = Math.Log(input1);
+            displayBox.Text = result.ToString();
         }
 
-        private void floorButton_Click(object? sender, EventArgs e)
+        private void floorButton_Click(object sender, EventArgs e)
         {
-            double inputValue;
-            if (double.TryParse(textBox1.Text, out inputValue))
-            {
-                double result = Math.Floor(inputValue);
-                textBox1.Text = result.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Invalid input. Please enter a valid number.");
-            }
+            double input1 = Convert.ToDouble(inputBox1.Text);
+            double result = Math.Floor(input1);
+            displayBox.Text = result.ToString();
         }
+
 
         private void ceilingButton_Click(object? sender, EventArgs e)
         {

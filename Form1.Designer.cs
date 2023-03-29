@@ -65,14 +65,14 @@
             // 
             // addButton
             // 
-          /*  addButton.Location = new Point(12, 115);
-            addButton.Margin = new Padding(4, 3, 4, 3);
-            addButton.Name = "addButton";
-            addButton.Size = new Size(47, 46);
-            addButton.TabIndex = 3;
-            addButton.Text = "+";
-            addButton.UseVisualStyleBackColor = true;
-            addButton.Click += addButton_Click;*/
+            /*  addButton.Location = new Point(12, 115);
+              addButton.Margin = new Padding(4, 3, 4, 3);
+              addButton.Name = "addButton";
+              addButton.Size = new Size(47, 46);
+              addButton.TabIndex = 3;
+              addButton.Text = "+";
+              addButton.UseVisualStyleBackColor = true;
+              addButton.Click += addButton_Click;*/
             // 
             // subtractButton
             // 
@@ -106,7 +106,7 @@
             divideButton.Text = "/";
             divideButton.UseVisualStyleBackColor = true;
             divideButton.Click += divideButton_Click;*/
-
+            /*
             // Sine Button
             this.sineButton = new System.Windows.Forms.Button();
             this.sineButton.Location = new System.Drawing.Point(150, 120);
@@ -189,7 +189,7 @@
             Name = "CalculatorForm";
             Text = "Calculator";
             ResumeLayout(false);
-            PerformLayout();
+            PerformLayout();/**/
 
 
 
@@ -204,5 +204,8 @@
         private System.Windows.Forms.TextBox inputBox1;
         private System.Windows.Forms.TextBox inputBox2;
         private System.Windows.Forms.TextBox displayBox;
+        private System.Windows.Forms.TextBox textBox1;
+
+
     }
 }
